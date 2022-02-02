@@ -31,6 +31,7 @@ $apps = @(
     # Misc.
     @{name = "Valve.Steam" }
     @{name = "EpicGames.EpicGamesLauncher" }
+    @{name = "Logitech.GHUB" }
 );
 
 Foreach ($app in $apps) {
