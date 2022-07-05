@@ -1,5 +1,10 @@
 <#
     Switches the Windows system theme between light and dark modes. App theme follows.
+
+    Installation:
+    - Create a shortcut of the .bat file. 
+    - Pput it somewhere inside
+        %AppData%\Microsoft\Windows\Start Menu\Programs
 #>
 
 function Get-IsSystemUsingLightTheme
