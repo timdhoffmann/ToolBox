@@ -1,37 +1,44 @@
 # Installs New applications.
 # Source: https://chrislayers.com/2021/08/01/scripting-winget/.
+
 $apps = @(
     # Development.
     @{name = "Microsoft.PowerShell" } 
     @{name = "Microsoft.VisualStudioCode" }
-    @{name = "Microsoft.VisualStudio.2022.Community" }
     @{name = "Git.Git" } 
     # OhMyPosh shell prompt.
     @{name = "JanDeDobbeleer.OhMyPosh" } 
-    @{name = "gerardog.gsudo" } 
-
+    
     # Productivity.
     @{name = "Mozilla.Firefox" }
     @{name = "Google.Chrome" }
-    @{name = "BraveSoftware.BraveBrowser" }
     @{name = "Notion.Notion" } 
-    @{name = "OpenWhisperSystems.Signal" } 
-    @{name = "WhatsApp.WhatsApp" } 
     @{name = "Discord.Discord" } 
     @{name = "Microsoft.PowerToys" } 
-    @{name = "Google.Drive" } 
-    @{name = "Foundry376.Mailspring" } 
-    @{name = "Foxit.FoxitReader" } 
+    @{name = "Bitwarden.Bitwarden" } 
+    
+    # Private Only.
+    # @{name = "Microsoft.VisualStudio.2022.Community" }
+    # @{name = "Foxit.FoxitReader" } 
+    # @{name = "Google.Drive" } 
+    # @{name = "Foundry376.Mailspring" } 
+    # @{name = "BraveSoftware.BraveBrowser" }
+    # @{name = "OpenWhisperSystems.Signal" } 
+    # @{name = "WhatsApp.WhatsApp" } 
+    # @{name = "Twilio.Authy" } 
+    # @{name = "Logitech.GHUB" }
     
     # Work.
     # This will throw an error but it is actually a success that only requires a system restart.
-    @{name = "Citrix.Workspace" } 
+    @{name = "SlackTechnologies.Slack" } 
     @{name = "Microsoft.Teams" }
+    @{name = "JetBrains.Toolbox" }
+    @{name = "JetBrains.IntelliJIDEA.Ultimate" }
 
     # Misc.
     @{name = "Valve.Steam" }
     @{name = "EpicGames.EpicGamesLauncher" }
-    @{name = "Logitech.GHUB" }
+    @{name = "Spotify.Spotify" }
 );
 
 Foreach ($app in $apps) {
