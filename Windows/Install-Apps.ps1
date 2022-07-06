@@ -34,6 +34,7 @@ $apps = @(
     @{name = "Microsoft.Teams" }
     @{name = "JetBrains.Toolbox" }
     @{name = "JetBrains.IntelliJIDEA.Ultimate" }
+    @{name = "JohannesMillan.superProductivity" }
 
     # Misc.
     @{name = "Valve.Steam" }
