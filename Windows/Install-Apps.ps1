@@ -16,6 +16,7 @@ $apps = @(
     @{name = "Discord.Discord" } 
     @{name = "Microsoft.PowerToys" } 
     @{name = "Bitwarden.Bitwarden" } 
+    @{name = "voidtools.Everything" } 
     
     # Private Only.
     # @{name = "Microsoft.VisualStudio.2022.Community" }
