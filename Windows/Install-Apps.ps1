@@ -36,6 +36,7 @@ $apps = @(
     @{name = "JetBrains.Toolbox" }
     @{name = "JetBrains.IntelliJIDEA.Ultimate" }
     @{name = "JohannesMillan.superProductivity" }
+    @{name = "mRemoteNG.mRemoteNG" }
 
     # Misc.
     @{name = "Valve.Steam" }
