@@ -8,6 +8,7 @@ $apps = @(
     @{name = "Git.Git" } 
     # OhMyPosh shell prompt.
     @{name = "JanDeDobbeleer.OhMyPosh" } 
+    @{name = "Python.Python.3" } 
     
     # Productivity.
     @{name = "Mozilla.Firefox" }
