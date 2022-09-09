@@ -38,6 +38,7 @@ $apps = @(
     @{name = "JetBrains.IntelliJIDEA.Ultimate" }
     @{name = "JohannesMillan.superProductivity" }
     @{name = "mRemoteNG.mRemoteNG" }
+    @{name = "Microsoft.AzureStorageExplorer" }
 
     # Misc.
     @{name = "Valve.Steam" }
