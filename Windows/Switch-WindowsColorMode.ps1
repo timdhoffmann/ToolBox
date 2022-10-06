@@ -26,3 +26,6 @@ function Set-AppTheme
 
 Set-SystemTheme
 Set-AppTheme
+# Restarts explorer to ensure that task bar, etc.
+# are in the desired, new, state.
+Stop-Process -Name "explorer"
