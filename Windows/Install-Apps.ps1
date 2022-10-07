@@ -34,8 +34,8 @@ $apps = @(
     # This will throw an error but it is actually a success that only requires a system restart.
     @{name = "SlackTechnologies.Slack" } 
     @{name = "Microsoft.Teams" }
+    # Individual Jetbrains apps seem to not update well with winget.
     @{name = "JetBrains.Toolbox" }
-    @{name = "JetBrains.IntelliJIDEA.Ultimate" }
     @{name = "JohannesMillan.superProductivity" }
     @{name = "mRemoteNG.mRemoteNG" }
     @{name = "Microsoft.AzureStorageExplorer" }
