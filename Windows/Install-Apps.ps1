@@ -9,6 +9,7 @@ $apps = @(
     # OhMyPosh shell prompt.
     @{name = "JanDeDobbeleer.OhMyPosh" } 
     @{name = "Python.Python.3" } 
+    @{name = "Windows Subsystem for Linux Preview" } 
     
     # Productivity.
     @{name = "Mozilla.Firefox" }
