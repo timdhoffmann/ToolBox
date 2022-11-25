@@ -41,6 +41,7 @@ $apps = @(
     @{name = "JohannesMillan.superProductivity" }
     @{name = "mRemoteNG.mRemoteNG" }
     @{name = "Microsoft.AzureStorageExplorer" }
+    @{name = "Microsoft.VisualStudio.2022.Professional" }
 
     # Misc.
     @{name = "Valve.Steam" }
