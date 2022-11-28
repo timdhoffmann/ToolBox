@@ -35,9 +35,8 @@ $apps = @(
     # This will throw an error but it is actually a success that only requires a system restart.
     @{name = "SlackTechnologies.Slack" } 
     @{name = "Microsoft.Teams" }
-    @{name = "JetBrains.dotUltimate" }
-    @{name = "JetBrains.IntelliJIDEA.Ultimate" }
-    @{name = "JetBrains.DataGrip" }
+    # Some tools, e.g. ReSharper only work when installed via Toolbox.
+    @{name = "JetBrains.Toolbox" }
     @{name = "JohannesMillan.superProductivity" }
     @{name = "mRemoteNG.mRemoteNG" }
     @{name = "Microsoft.AzureStorageExplorer" }
