@@ -1,0 +1,43 @@
+{
+  "basic-apps": [
+    "Microsoft.PowerShell",
+    "Microsoft.VisualStudioCode",
+    "Git.Git",
+    "JanDeDobbeleer.OhMyPosh",
+    "Python.Python.3",
+    "Windows Subsystem for Linux Preview",
+    "Neovim.Neovim",
+    "Microsoft.VisualStudio.2022.BuildTools",
+    "Rustlang.Rustup",
+    "Mozilla.Firefox",
+    "Google.Chrome",
+    "Notion.Notion",
+    "Discord.Discord",
+    "Microsoft.PowerToys",
+    "Bitwarden.Bitwarden",
+    "voidtools.Everything",
+    "Valve.Steam",
+    "EpicGames.EpicGamesLauncher",
+    "Spotify.Spotify"
+  ],
+  "private-only-apps": [
+    "Microsoft.VisualStudio.2022.Community",
+    "Foxit.FoxitReader",
+    "Google.Drive",
+    "Foundry376.Mailspring",
+    "BraveSoftware.BraveBrowser",
+    "OpenWhisperSystems.Signal",
+    "WhatsApp.WhatsApp",
+    "Twilio.Authy",
+    "Logitech.GHUB"
+  ],
+  "work-only-apps": [
+    "SlackTechnologies.Slack",
+    "Microsoft.Teams",
+    "JetBrains.Toolbox",
+    "JohannesMillan.superProductivity",
+    "mRemoteNG.mRemoteNG",
+    "Microsoft.AzureStorageExplorer",
+    "Microsoft.VisualStudio.2022.Professional"
+  ]
+}
