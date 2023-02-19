@@ -4,10 +4,10 @@
 param (
     [Parameter(Mandatory)]
     [bool]
-    $IsWork,
+    $IsWorkMachine,
 
     [switch]
-    $DryRun
+    $WhatIf
 )
 
 $apps = @(
@@ -61,7 +61,7 @@ $workOnlyApps = @(
     @{name = "Microsoft.VisualStudio.2022.Professional" }
 );
 
-if ($IsWork) {
+if ($IsWorkMachine) {
     $apps += $workOnlyApps
 } else {
     $apps += $privateOnlyApps
@@ -69,8 +69,8 @@ if ($IsWork) {
 
 Foreach ($app in $apps)
 {
-    Write-Host($app.name)
-    if ($DryRun) {
+    Write-Host($app)
+    if ($WhatIf) {
         continue
     }
 
