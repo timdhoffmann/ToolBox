@@ -2,9 +2,11 @@
 # Source: https://chrislayers.com/2021/08/01/scripting-winget/.
 
 param (
-    [Parameter(Mandatory)]
-    [bool]
-    $IsWorkMachine,
+    [switch]
+    $InstallWorkApps,
+
+    [switch]
+    $InstallPrivateApps,
 
     [switch]
     $WhatIf
@@ -61,15 +63,19 @@ $workOnlyApps = @(
     @{name = "Microsoft.VisualStudio.2022.Professional" }
 );
 
-if ($IsWorkMachine) {
+if ($InstallWorkApps) {
+    Write-Host("Adding work only apps.")
     $apps += $workOnlyApps
-} else {
+}
+
+if ($InstallPrivateApps) {
+    Write-Host("Adding private only apps.")
     $apps += $privateOnlyApps
 }
 
 Foreach ($app in $apps)
 {
-    Write-Host($app)
+    Write-Host($app.name)
     if ($WhatIf) {
         continue
     }
