@@ -3,37 +3,39 @@
 
 $apps = @(
     # Development.
-    @{name = "Microsoft.PowerShell" } 
+    @{name = "Microsoft.PowerShell" }
     @{name = "Microsoft.VisualStudioCode" }
-    @{name = "Git.Git" } 
+    @{name = "Git.Git" }
     # OhMyPosh shell prompt.
-    @{name = "JanDeDobbeleer.OhMyPosh" } 
-    @{name = "Python.Python.3" } 
-    @{name = "Windows Subsystem for Linux Preview" } 
-    
+    @{name = "JanDeDobbeleer.OhMyPosh" }
+    @{name = "Python.Python.3" }
+    @{name = "Windows Subsystem for Linux Preview" }
+    @{name = "Neovim.Neovim" }
+    @{name = "Rustlang.Rustup" }
+
     # Productivity.
     @{name = "Mozilla.Firefox" }
     @{name = "Google.Chrome" }
-    @{name = "Notion.Notion" } 
-    @{name = "Discord.Discord" } 
-    @{name = "Microsoft.PowerToys" } 
-    @{name = "Bitwarden.Bitwarden" } 
-    @{name = "voidtools.Everything" } 
-    
+    @{name = "Notion.Notion" }
+    @{name = "Discord.Discord" }
+    @{name = "Microsoft.PowerToys" }
+    @{name = "Bitwarden.Bitwarden" }
+    @{name = "voidtools.Everything" }
+
     # Private Only.
     # @{name = "Microsoft.VisualStudio.2022.Community" }
-    # @{name = "Foxit.FoxitReader" } 
-    # @{name = "Google.Drive" } 
-    # @{name = "Foundry376.Mailspring" } 
+    # @{name = "Foxit.FoxitReader" }
+    # @{name = "Google.Drive" }
+    # @{name = "Foundry376.Mailspring" }
     # @{name = "BraveSoftware.BraveBrowser" }
-    # @{name = "OpenWhisperSystems.Signal" } 
-    # @{name = "WhatsApp.WhatsApp" } 
-    # @{name = "Twilio.Authy" } 
+    # @{name = "OpenWhisperSystems.Signal" }
+    # @{name = "WhatsApp.WhatsApp" }
+    # @{name = "Twilio.Authy" }
     # @{name = "Logitech.GHUB" }
-    
+
     # Work.
     # This will throw an error but it is actually a success that only requires a system restart.
-    @{name = "SlackTechnologies.Slack" } 
+    @{name = "SlackTechnologies.Slack" }
     @{name = "Microsoft.Teams" }
     # Some tools, e.g. ReSharper only work when installed via Toolbox.
     @{name = "JetBrains.Toolbox" }
@@ -57,7 +59,7 @@ Foreach ($app in $apps) {
             winget install --exact --silent $app.name --source $app.source
         }
         else {
-            winget install --exact --silent $app.name 
+            winget install --exact --silent $app.name
         }
     }
     else {
