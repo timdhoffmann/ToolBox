@@ -1,6 +1,12 @@
 # Installs new applications.
 
 import subprocess
+import json
+
+with open("apps-to-install.json") as apps_to_install:
+    apps_to_install_json = json.load(apps_to_install)
+    print(apps_to_install_json)
+exit()
 
 apps = [
     # Development.
