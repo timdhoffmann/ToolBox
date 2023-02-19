@@ -27,3 +27,9 @@ for app in apps:
 
     else:
         print(f"Did not find installation of '{app}'. Attempting to install...")
+
+        output = subprocess.run(f"winget install --exact --silent {app}")
+        if output.returncode == 0:
+            print(f"Installed {app} successfully.")
+        else:
+            print(f"Error: {output}.")
