@@ -22,6 +22,7 @@ $apps = @(
     @{name = "Python.Python.3" }
     @{name = "Windows Subsystem for Linux Preview" }
     @{name = "Neovim.Neovim" }
+    @{name = "Microsoft.VisualStudio.2022.BuildTools" }
     @{name = "Rustlang.Rustup" }
 
     # Productivity.
@@ -75,14 +76,15 @@ if ($InstallPrivateApps) {
 
 Foreach ($app in $apps)
 {
-    Write-Host($app.name)
+    $appInstalledResponse = winget list --exact -q $app.name
+    Write-Host("appInstalledResponse for '$($app.name)' = '${appInstalledResponse}'")
     if ($WhatIf) {
+        Write-Host("Skipping operations in WhatIf mode.")
         continue
     }
 
     # Checks if the app is already installed.
-    $listApp = winget list --exact -q $app.name
-    if (![String]::Join("", $listApp).Contains($app.name))
+    if (![String]::Join("", $appInstalledResponse).Contains($app.name))
     {
         Write-host "Installing:" $app.name
         if ($null -ne $app.source)
