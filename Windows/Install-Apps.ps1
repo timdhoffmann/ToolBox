@@ -9,6 +9,9 @@ param (
     $InstallPrivateApps,
 
     [switch]
+    $Debug,
+
+    [switch]
     $WhatIf
 )
 
@@ -77,7 +80,12 @@ if ($InstallPrivateApps) {
 Foreach ($app in $apps)
 {
     $appInstalledResponse = winget list --exact -q $app.name
-    Write-Host("appInstalledResponse for '$($app.name)' = '${appInstalledResponse}'")
+    if($Debug) {
+        Write-Host("appInstalledResponse for '$($app.name)' = '${appInstalledResponse}'")
+    } else {
+        Write-Host("Addigin $($app.name).")
+    }
+
     if ($WhatIf) {
         Write-Host("Skipping operations in WhatIf mode.")
         continue
