@@ -2,13 +2,27 @@
 
 import subprocess
 import json
+import sys
+
+if  __name__ != "__main__":
+    print("Running as module.")
+    exit()
+
+print("Running as main.")
+
+args = sys.argv
+print(args)
+if len(args) > 5:
+    raise Warning("Exceeding expected arguments.")
+
+install_work_apps, install_private_apps = args[1:]
 
 with open("apps-to-install.json") as apps_to_install:
     apps_to_install_json = json.load(apps_to_install)
     print(apps_to_install_json["basic-apps"])
 exit()
 
-apps = [
+apps: list[str] = [
     # Development.
     "test.test",
     "Microsoft.PowerShell",
