@@ -22,7 +22,7 @@ $apps = @(
     @{name = "Git.Git" }
     # OhMyPosh shell prompt.
     @{name = "JanDeDobbeleer.OhMyPosh" }
-    @{name = "Python.Python.3" }
+    @{name = "Python.Python.3.11" }
     @{name = "Windows Subsystem for Linux Preview" }
     @{name = "Neovim.Neovim" }
     @{name = "Microsoft.VisualStudio.2022.BuildTools" }
