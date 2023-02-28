@@ -12,14 +12,25 @@ print("Running as main.")
 
 args = sys.argv
 print(args)
-if len(args) > 5:
-    raise Warning("Exceeding expected arguments.")
+if (len(args) <= 1) or (len(args) > 5):
+    raise Warning("Unexpected number of arguments.")
 
 install_work_apps, install_private_apps = args[1:]
 
-with open("apps-to-install.json") as apps_to_install:
-    apps_to_install_json = json.load(apps_to_install)
-    print(apps_to_install_json["basic-apps"])
+with open("apps-to-install.json") as apps_to_install_file:
+    apps_to_install_json = json.load(apps_to_install_file)
+
+    apps_to_install = apps_to_install_json["basic-apps"]
+
+    if install_private_apps == "true":
+        apps_to_install += apps_to_install_json["private-only-apps"]
+        print("Adding private only apps.")
+
+    if install_work_apps == "true":
+        apps_to_install += apps_to_install_json["work-only-apps"]
+        print("Adding work only apps.")
+
+    print(f"Apps to install: {apps_to_install}")
 exit()
 
 apps: list[str] = [
