@@ -7,7 +7,10 @@ import sys
 
 json_file_name = "apps-to-install.json"
 
-def main(install_work_apps: str, install_private_apps: str) -> None:
+def main(install_work_apps: str, install_private_apps: str, should_perform_operations: str) -> None:
+
+    # Gets apps to install.
+
     script_dir_path = os.path.dirname(os.path.abspath(__file__))
     json_file_path = os.path.join(script_dir_path, json_file_name)
 
@@ -25,16 +28,13 @@ def main(install_work_apps: str, install_private_apps: str) -> None:
             print("Adding work only apps.")
 
         print(f"Apps to install: {apps_to_install}")
-    exit()
+        if should_perform_operations != "-y":
+            print("Not performing actions. Provide '-y' to perform operations.")
+            exit()
 
-    apps: list[str] = [
-        # Development.
-        "test.test",
-        "Microsoft.PowerShell",
-        # "Microsoft.VisualStudioCode"
-    ]
+    # Installs apps.
 
-    for app in apps:
+    for app in apps_to_install:
         list_app_response = subprocess.run(f"winget list --exact --query {app}", \
             stdout=subprocess.DEVNULL)
 
@@ -70,6 +70,6 @@ print(args)
 if (len(args) <= 1) or (len(args) > 5):
     raise Warning("Unexpected number of arguments.")
 
-install_work_apps, install_private_apps = args[1:]
+install_work_apps, install_private_apps, should_perform_operations = args[1:]
 
-main(install_work_apps, install_private_apps)
+main(install_work_apps, install_private_apps, should_perform_operations)
