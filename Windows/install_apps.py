@@ -2,20 +2,26 @@
 
 import subprocess
 import json
+import os
 import sys
 
-def main(install_work_apps: str, install_private_apps: str) -> None:
-    with open("apps-to-install.json") as apps_to_install_file:
-        apps_to_install_json = json.load(apps_to_install_file)
+json_file_name = "apps-to-install.json"
 
-        apps_to_install = apps_to_install_json["basic-apps"]
+def main(install_work_apps: str, install_private_apps: str) -> None:
+    script_dir_path = os.path.dirname(os.path.abspath(__file__))
+    json_file_path = os.path.join(script_dir_path, json_file_name)
+
+    with open(json_file_path) as apps_to_install_file:
+        apps_to_install_content = json.load(apps_to_install_file)
+
+        apps_to_install = apps_to_install_content["basic-apps"]
 
         if install_private_apps == "true":
-            apps_to_install += apps_to_install_json["private-only-apps"]
+            apps_to_install += apps_to_install_content["private-only-apps"]
             print("Adding private only apps.")
 
         if install_work_apps == "true":
-            apps_to_install += apps_to_install_json["work-only-apps"]
+            apps_to_install += apps_to_install_content["work-only-apps"]
             print("Adding work only apps.")
 
         print(f"Apps to install: {apps_to_install}")
