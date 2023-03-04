@@ -5,7 +5,7 @@ import json
 import os
 import sys
 
-json_file_name = "apps-to-install.json"
+json_file_name = "winget-apps.json"
 
 def main(install_work_apps: str, install_private_apps: str, should_perform_operations: str) -> None:
 
@@ -65,6 +65,7 @@ if  __name__ != "__main__":
 
 print("Running as main.")
 
+# TODO: Check out 'click' for argument parsing.
 args = sys.argv
 print(args)
 if (len(args) <= 1) or (len(args) > 5):
