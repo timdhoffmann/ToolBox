@@ -7,7 +7,14 @@ import sys
 
 json_file_name = "winget-apps.json"
 
-def main(install_work_apps: str, install_private_apps: str, should_perform_operations: str) -> None:
+def main(args: list[str]) -> None:
+
+    # Handle args.
+
+    # TODO: Handle arbitrary number of arguments.
+    if (len(args) != 4):
+        raise Warning("Unexpected number of arguments.")
+    install_work_apps, install_private_apps, should_perform_operations = args[1:]
 
     # Gets apps to install.
 
@@ -67,10 +74,4 @@ print("Running as main.")
 
 # TODO: Check out 'click' for argument parsing.
 args = sys.argv
-print(args)
-if (len(args) <= 1) or (len(args) > 5):
-    raise Warning("Unexpected number of arguments.")
-
-install_work_apps, install_private_apps, should_perform_operations = args[1:]
-
-main(install_work_apps, install_private_apps, should_perform_operations)
+main(args)
