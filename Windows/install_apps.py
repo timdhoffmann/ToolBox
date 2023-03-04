@@ -18,8 +18,11 @@ def main(args: list[str]) -> None:
 
     # Gets apps to install.
 
-    script_dir_path = os.path.dirname(os.path.abspath(__file__))
+    script_dir_path = os.getcwd()
     json_file_path = os.path.join(script_dir_path, json_file_name)
+    if not os.path.exists(json_file_path):
+        raise FileNotFoundError(f"""File expected but not found at: {json_file_path}.
+            Make sure you run the script from a directory containing the json file.""")
 
     with open(json_file_path) as apps_to_install_file:
         apps_to_install_content = json.load(apps_to_install_file)
