@@ -1,1 +1,3 @@
 **/WindowsTerminal/FontsToInstall/
+# Rust compilation targets.
+**/target/
