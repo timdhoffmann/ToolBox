@@ -4,21 +4,27 @@ use std::{env, fs};
 pub struct Config {
     pub query: String,
     pub file_path: String,
-    pub is_case_sensitive: bool,
+    pub ignore_case: bool,
 }
 
 impl Config {
-    pub fn build(args: &[String]) -> Result<Config, &'static str> {
-        if args.len() < 3 {
-            return Err("Missing minimum required arguments.");
-        }
+    pub fn build(mut args: impl Iterator<Item = String>) -> Result<Config, &'static str> {
+        // Discards the first argument (invocation path).
+        let _ = args.next();
 
-        let query = args[1].clone();
-        let file_path = args[2].clone();
-        // To set the env var in a powershell session: $env:CASE_INSENSITIVE = "true"
-        let is_case_sensitive = env::var("CASE_INSENSITIVE").is_err();
+        let query = match args.next() {
+            Some(arg) => arg,
+            None => return Err("A query must be specified as argument."),
+        };
 
-        Ok(Config { query, file_path, is_case_sensitive })
+        let file_path = match args.next() {
+           Some(arg) => arg,
+           None => return Err("A path to a file to search in must be specified as an argument."),
+        };
+        // To set the env var in a powershell session: $env:MY_VAR = "true"
+        let ignore_case = env::var("IGNORE_CASE").is_ok();
+
+        Ok(Config { query, file_path, ignore_case })
     }
 }
 
@@ -30,10 +36,10 @@ pub fn run(config: &Config) -> Result<(), Box<dyn Error>> {
         &config.query, &config.file_path
     );
 
-    let results = if config.is_case_sensitive {
-        search_case_sensitive(&config.query, &file_contents)
+    let results = if config.ignore_case {
+        search_ignore_case(&config.query, &file_contents)
     } else {
-        search_case_insensitive(&config.query, &file_contents)
+        search_case_sensitive(&config.query, &file_contents)
     };
 
     for line in results {
@@ -53,7 +59,7 @@ fn search_case_sensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     result
 }
 
-fn search_case_insensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
+fn search_ignore_case<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
     let query = query.to_lowercase();
     let mut result = Vec::new();
     for line in contents.lines() {
@@ -93,7 +99,7 @@ Trust me.";
 
         assert_eq!(
             vec!["Rust:", "Trust me."],
-            search_case_insensitive(query, contents)
+            search_ignore_case(query, contents)
         );
     }
 }
