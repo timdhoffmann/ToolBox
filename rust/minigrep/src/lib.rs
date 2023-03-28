@@ -18,13 +18,17 @@ impl Config {
         };
 
         let file_path = match args.next() {
-           Some(arg) => arg,
-           None => return Err("A path to a file to search in must be specified as an argument."),
+            Some(arg) => arg,
+            None => return Err("A path to a file to search in must be specified as an argument."),
         };
         // To set the env var in a powershell session: $env:MY_VAR = "true"
         let ignore_case = env::var("IGNORE_CASE").is_ok();
 
-        Ok(Config { query, file_path, ignore_case })
+        Ok(Config {
+            query,
+            file_path,
+            ignore_case,
+        })
     }
 }
 
@@ -50,24 +54,17 @@ pub fn run(config: &Config) -> Result<(), Box<dyn Error>> {
 }
 
 fn search_case_sensitive<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    let mut result = Vec::new();
-    for line in contents.lines() {
-        if line.contains(query) {
-            result.push(line);
-        }
-    }
-    result
+    contents
+        .lines()
+        .filter(|line| line.contains(query))
+        .collect()
 }
 
 fn search_ignore_case<'a>(query: &str, contents: &'a str) -> Vec<&'a str> {
-    let query = query.to_lowercase();
-    let mut result = Vec::new();
-    for line in contents.lines() {
-        if line.to_lowercase().contains(&query) {
-            result.push(line);
-        }
-    }
-    result
+    contents
+        .lines()
+        .filter(|line| line.to_lowercase().contains(&query.to_lowercase()))
+        .collect()
 }
 
 #[cfg(test)]
