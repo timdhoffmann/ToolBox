@@ -4,6 +4,7 @@ basic
 	googlechrome
 	vscode
 	powershell-core
+  oh-my-posh
 	spotify
   neovim
   firefox
