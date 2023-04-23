@@ -15,12 +15,16 @@ def main(args: argparse.Namespace) -> None:
 
     script_dir_path = os.getcwd()
     apps_file_path = os.path.join(script_dir_path, apps_file_name)
-    print(apps_file_path)
+    if not os.path.exists(apps_file_path):
+        raise FileNotFoundError(f"""Configuration file not found at '{apps_file_path}. Make sure you are running
+        the script from a directory containing the file.""")
 
     with open(apps_file_path, 'r') as apps_file:
-        apps = yaml.safe_load(apps_file)
+        apps_yml = yaml.safe_load(apps_file)
 
-        print(apps)
+        for app in apps_yml['apps']:
+            print(app)
+
     # TODO
 
 parser = argparse.ArgumentParser()
