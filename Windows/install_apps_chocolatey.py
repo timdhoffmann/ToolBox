@@ -13,6 +13,15 @@ print(":: Install Apps with Chocolatey ::")
 def main(args: argparse.Namespace) -> None:
     print(args)
 
+    apps_to_install = get_apps_to_install(args)
+    print(apps_to_install)
+
+    if not args.y:
+        print("To perform operations, provide the '-y' argument.")
+        exit()
+
+
+def get_apps_to_install(args: argparse.Namespace) -> list[str]:
     script_dir_path = os.getcwd()
     apps_file_path = os.path.join(script_dir_path, apps_file_name)
     if not os.path.exists(apps_file_path):
@@ -34,13 +43,7 @@ def main(args: argparse.Namespace) -> None:
             for app in apps_yml['apps']['work']:
                 apps_to_install.append(app)
 
-        print(apps_to_install)
-
-        if not args.y:
-            print("To perform operations, provide the '-y' argument.")
-            exit()
-
-    # TODO
+        return apps_to_install
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--private', action='store_true', help='install private apps.')
