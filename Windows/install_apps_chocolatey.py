@@ -22,8 +22,23 @@ def main(args: argparse.Namespace) -> None:
     with open(apps_file_path, 'r') as apps_file:
         apps_yml = yaml.safe_load(apps_file)
 
-        for app in apps_yml['apps']:
-            print(app)
+        apps_to_install: list[str] = []
+        for app in apps_yml['apps']['common']:
+            apps_to_install.append(app)
+
+        if args.private:
+            for app in apps_yml['apps']['private']:
+                apps_to_install.append(app)
+
+        if  args.work:
+            for app in apps_yml['apps']['work']:
+                apps_to_install.append(app)
+
+        print(apps_to_install)
+
+        if not args.y:
+            print("To perform operations, provide the '-y' argument.")
+            exit()
 
     # TODO
 

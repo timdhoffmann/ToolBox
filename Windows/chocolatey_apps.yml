@@ -1,5 +1,5 @@
 apps:
-  regluar:
+  common:
     - app1
     - app2
   private:
