@@ -1,3 +1,8 @@
 apps:
-  - app1
-  - app2
+  regluar:
+    - app1
+    - app2
+  private:
+    - private1
+  work:
+   - workapp1
