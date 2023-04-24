@@ -21,9 +21,9 @@ def intall_apps(args: argparse.Namespace, apps: list[str]):
         exit()
 
     for app in apps:
-        # TODO implement installation
-        response = subprocess.run(["chocolatey", "install", app, "-y"])
-        print(response.stdout)
+        # TODO: handle edge cases.
+        response = subprocess.run(["chocolatey", "upgrade", app, "-y"])#, stdout=subprocess.DEVNULL)
+        print(f"{response.stdout} {response.returncode} {response.stderr}")
 
 
 def get_apps_to_install(args: argparse.Namespace) -> list[str]:
