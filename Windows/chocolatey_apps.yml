@@ -1,8 +1,22 @@
 apps:
   common:
-    - app1
-    - app2
+    # - powertoys
+    # - git
+    # - googlechrome
+    # - vscode
+    # - powershell-core
+    # - oh-my-posh
+    # - spotify
+    - neovim
+    # - firefox
+    # - notion
+    # - bitwarden
+    # - dotnet-sdk
+    # # needs visual studio 2022
+    # - visualstudio2022-workload-manageddesktop
+
   private:
     - private1
+
   work:
    - workapp1

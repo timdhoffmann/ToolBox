@@ -1,5 +1,6 @@
 import argparse
 import os
+import subprocess
 import yaml
 
 if __name__ != "__main__":
@@ -19,10 +20,14 @@ def intall_apps(args: argparse.Namespace, apps: list[str]):
         print("To perform operations, provide the '-y' argument.")
         exit()
 
-    # TODO implement installation
+    for app in apps:
+        # TODO implement installation
+        response = subprocess.run(["chocolatey", "install", app, "-y"])
+        print(response.stdout)
+
 
 def get_apps_to_install(args: argparse.Namespace) -> list[str]:
-    script_dir_path = os.getcwd()
+    script_dir_path = os.path.dirname(os.path.realpath(__file__))
     apps_file_path = os.path.join(script_dir_path, apps_file_name)
     if not os.path.exists(apps_file_path):
         raise FileNotFoundError(f"""Configuration file not found at '{apps_file_path}. Make sure you are running
