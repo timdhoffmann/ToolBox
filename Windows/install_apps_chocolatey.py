@@ -17,17 +17,19 @@ def main(args: argparse.Namespace) -> None:
 
 def handle_apps(args: argparse.Namespace, apps: list[str]):
 
+    choco_args: list[str] = []
+    if not args.y:
+        print("Running in 'whatif' mode. To perform operations, provide the '-y' argument.")
+        choco_args.append("--whatif")
+    else:
+        choco_args.append("-y")
+
     for app in apps:
 
-        if not args.y:
-            print("To perform operations, provide the '-y' argument.")
-            response = subprocess.run(["chocolatey", "upgrade", app, "--whatif"])#, stdout=subprocess.DEVNULL)
-            print(f"{response.stdout} {response.returncode} {response.stderr}")
-            continue
+        cmd = ["chocolatey", "upgrade", app, *choco_args]
+        print(cmd)
 
-        print("Installing", app, "...")
-        # TODO: handle edge cases.
-        response = subprocess.run(["chocolatey", "upgrade", app, "-y"])#, stdout=subprocess.DEVNULL)
+        response = subprocess.run(cmd)#, stdout=subprocess.DEVNULL)
         print(f"{response.stdout} {response.returncode} {response.stderr}")
 
         # TODO: handle non-zero return codes.
