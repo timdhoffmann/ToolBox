@@ -3,30 +3,37 @@ import os
 import subprocess
 import yaml
 
-if __name__ != "__main__":
+if not __name__ == "__main__":
     print("Running as module.")
     exit()
 
 def main(args: argparse.Namespace) -> None:
-    print(args)
+    # TODO: Consider if we need to check if we are running elevated for choco to work.
 
-    apps_to_install = get_apps_to_install(args)
-    print(apps_to_install)
+    apps = get_apps(args)
+    print(apps)
 
-    intall_apps(args, apps_to_install)
+    handle_apps(args, apps)
 
-def intall_apps(args: argparse.Namespace, apps: list[str]):
-    if not args.y:
-        print("To perform operations, provide the '-y' argument.")
-        exit()
+def handle_apps(args: argparse.Namespace, apps: list[str]):
 
     for app in apps:
+
+        if not args.y:
+            print("To perform operations, provide the '-y' argument.")
+            response = subprocess.run(["chocolatey", "upgrade", app, "--whatif"])#, stdout=subprocess.DEVNULL)
+            print(f"{response.stdout} {response.returncode} {response.stderr}")
+            continue
+
+        print("Installing", app, "...")
         # TODO: handle edge cases.
         response = subprocess.run(["chocolatey", "upgrade", app, "-y"])#, stdout=subprocess.DEVNULL)
         print(f"{response.stdout} {response.returncode} {response.stderr}")
 
+        # TODO: handle non-zero return codes.
 
-def get_apps_to_install(args: argparse.Namespace) -> list[str]:
+
+def get_apps(args: argparse.Namespace) -> list[str]:
     script_dir_path = os.path.dirname(os.path.realpath(__file__))
     apps_file_path = os.path.join(script_dir_path, apps_file_name)
     if not os.path.exists(apps_file_path):
