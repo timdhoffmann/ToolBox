@@ -36,7 +36,12 @@ def handle_apps(args: argparse.Namespace, apps: list[str]):
         cmd = ["chocolatey", "upgrade", app, *choco_args]
         print(cmd)
 
-        response = subprocess.run(cmd, stdout=subprocess.DEVNULL)
+        show_output = True
+        stdout_dest = None if show_output else subprocess.DEVNULL
+        response = subprocess.run(
+            cmd, stdout=stdout_dest, check=True
+        )
+
         print(f"\
 {response.stdout=!r},\
 {response.returncode=!r},\

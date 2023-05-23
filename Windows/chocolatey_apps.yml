@@ -2,8 +2,8 @@
 apps:
   common:
     - powertoys
-    # - git
-    # - googlechrome
+    - git
+    - googlechrome
     # - vscode
     # - powershell-core
     # - oh-my-posh
