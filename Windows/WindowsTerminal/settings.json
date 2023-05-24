@@ -37,7 +37,7 @@
     "confirmCloseAllTabs": false,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2963a402336}",
+    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "initialCols": 240,
     "launchMode": "default",
     "profiles":
@@ -62,12 +62,13 @@
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
-                "opacity": 80,
+                "opacity": 100,
                 "source": "Windows.Terminal.PowershellCore",
-                "useAcrylic": true
+                "useAcrylic": false
             },
             {
-                "colorScheme": "One Half Dark",
+                "adjustIndistinguishableColors": "indexed",
+                "colorScheme": "Andromeda",
                 "experimental.retroTerminalEffect": false,
                 "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
                 "hidden": false,
@@ -98,6 +99,29 @@
     },
     "schemes":
     [
+        {
+            "background": "#262A33",
+            "black": "#000000",
+            "blue": "#2472C8",
+            "brightBlack": "#666666",
+            "brightBlue": "#2472C8",
+            "brightCyan": "#0FA8CD",
+            "brightGreen": "#05BC79",
+            "brightPurple": "#BC3FBC",
+            "brightRed": "#CD3131",
+            "brightWhite": "#E5E5E5",
+            "brightYellow": "#E5E512",
+            "cursorColor": "#F8F8F0",
+            "cyan": "#0FA8CD",
+            "foreground": "#E5E5E5",
+            "green": "#05BC79",
+            "name": "Andromeda",
+            "purple": "#BC3FBC",
+            "red": "#CD3131",
+            "selectionBackground": "#5A5C62",
+            "white": "#E5E5E5",
+            "yellow": "#E5E512"
+        },
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
@@ -143,29 +167,6 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
-        },
-        {
-            "background": "#1E2027",
-            "black": "#585F6D",
-            "blue": "#4D89C4",
-            "brightBlack": "#585F6D",
-            "brightBlue": "#4C89C5",
-            "brightCyan": "#44A8B6",
-            "brightGreen": "#5AB977",
-            "brightPurple": "#D55119",
-            "brightRed": "#D95360",
-            "brightWhite": "#E6E5FF",
-            "brightYellow": "#DFB563",
-            "cursorColor": "#F6F7EC",
-            "cyan": "#44A8B6",
-            "foreground": "#9BA2B2",
-            "green": "#5AB977",
-            "name": "Firewatch",
-            "purple": "#D55119",
-            "red": "#D95360",
-            "selectionBackground": "#2F363E",
-            "white": "#E6E5FF",
-            "yellow": "#DFB563"
         },
         {
             "background": "#1A1A1A",
@@ -421,6 +422,7 @@
             "yellow": "#808000"
         }
     ],
+    "theme": "system",
     "themes": [],
     "windowingBehavior": "useAnyExisting"
 }
