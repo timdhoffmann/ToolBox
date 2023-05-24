@@ -6,7 +6,8 @@ apps:
     - googlechrome
     # - vscode
     # - powershell-core
-    # - oh-my-posh
+    # - starship
+    # - poshgit
     - spotify
     - neovim
     # - firefox
