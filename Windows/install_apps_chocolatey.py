@@ -52,6 +52,13 @@ def handle_apps(args: argparse.Namespace, apps: list[str]):
         if response.returncode != 0:
             print(f"Non-zero return code detected: {response.returncode}")
 
+        # TODO: Handle hanging installers, e.g. Spotify:
+            # Download of SpotifyFullSetup.exe (909.97 KB) completed.
+            # Hashes match.
+            # SUCCESS: The scheduled task "spotify" has successfully been created.
+            # SUCCESS: Attempted to run the scheduled task "spotify".
+            # SUCCESS: The scheduled task "spotify" was successfully deleted.
+
 
 def get_apps(args: argparse.Namespace) -> list[str]:
     script_dir_path = os.path.dirname(os.path.realpath(__file__))
