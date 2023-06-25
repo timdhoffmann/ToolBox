@@ -20,6 +20,7 @@ apps:
     - python
     - steam
     - epicgameslauncher
+    - adobereader
     # "voidtools.Everything",
 
   private:
