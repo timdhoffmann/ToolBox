@@ -48,6 +48,7 @@ apps:
   - mremoteng
   - p4v
   - postman
+  - jetbrains-rider
     #   ("SlackTechnologies.Slack",)
     # ("Microsoft.Teams",)
   # -     "JohannesMillan.superProductivity",
