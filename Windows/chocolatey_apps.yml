@@ -21,6 +21,7 @@ apps:
     - steam
     - epicgameslauncher
     - adobereader
+    - 7zip
     # "voidtools.Everything",
 
   private:
