@@ -22,6 +22,9 @@ apps:
     - epicgameslauncher
     - adobereader
     - 7zip
+    - vagrant
+    - virtualbox
+    - lghub
     # "voidtools.Everything",
 
   private:
