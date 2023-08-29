@@ -53,6 +53,7 @@ apps:
   - p4v
   - postman
   - jetbrains-rider
+  - strawberryperl
     #   ("SlackTechnologies.Slack",)
     # ("Microsoft.Teams",)
   # -     "JohannesMillan.superProductivity",
