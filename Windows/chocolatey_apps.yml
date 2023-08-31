@@ -25,6 +25,7 @@ apps:
     - vagrant
     - virtualbox
     - lghub
+    - windirstat
     # "voidtools.Everything",
 
   private:
