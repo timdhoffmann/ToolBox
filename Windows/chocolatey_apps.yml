@@ -50,12 +50,14 @@ apps:
   work:
   - visualstudio2022professional
   # UE5
+  ## .NET desktop development
+  - visualstudio2022-workload-manageddesktop
   ## Desktop development with C++
   - visualstudio2022-workload-nativedesktop
-  ## Game development with C++
-  - visualstudio2022-workload-nativegame
   ## Universal Windows Platform development
   - visualstudio2022-workload-universal
+  ## Game development with C++
+  - visualstudio2022-workload-nativegame
   ## Maybe .net desktop build tools for .net 4.6.2?
 
   - intellijidea-ultimate
