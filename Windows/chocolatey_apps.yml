@@ -1,31 +1,31 @@
 # TODO: Clean up.
 apps:
   common:
-    - powertoys
+    - 7zip
+    - adobereader
+    - bitwarden
+    - discord
+    - dotnet-sdk
+    - epicgameslauncher
+    - firefox
     - git
     - googlechrome
-    - vscode
-    - powershell-core
-    - starship
-    # - poshgit # Outdated in choco. Install via scoop.
-    - spotify
+    - lghub
     - neovim
-    - firefox
-    - notion
-    - bitwarden
-    - dotnet-sdk
     - nerd-fonts-cascadiacode
-    - rustup.install
-    - discord
+    - notion
+    - powershell-core
+    - powertoys
     - python
+    - rustup.install
+    - starship
     - steam
-    - epicgameslauncher
-    - adobereader
-    - 7zip
     - vagrant
     - virtualbox
-    - lghub
+    - vscode
     - windirstat
+    # - poshgit # Outdated in choco. Install via scoop.
+    - spotify
     # "voidtools.Everything",
 
   private:
@@ -49,6 +49,13 @@ apps:
 
   work:
   - visualstudio2022professional
+  # UE5
+  ## Desktop development with C++
+  - visualstudio2022-workload-nativedesktop
+  ## Game development with C++
+  - visualstudio2022-workload-nativegame
+  ## Universal Windows Platform development
+  - visualstudio2022-workload-universal
   - intellijidea-ultimate
   - mremoteng
   - p4v
