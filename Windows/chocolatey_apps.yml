@@ -56,6 +56,8 @@ apps:
   - visualstudio2022-workload-nativegame
   ## Universal Windows Platform development
   - visualstudio2022-workload-universal
+  ## Maybe .net desktop build tools for .net 4.6.2?
+
   - intellijidea-ultimate
   - mremoteng
   - p4v
