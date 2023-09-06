@@ -60,6 +60,8 @@ apps:
   - visualstudio2022-workload-nativegame
   ## Maybe .net desktop build tools for .net 4.6.2?
 
+  # Useful for investigating file metadata, e.g. for '.exe' files.
+  # - exiftool
   - intellijidea-ultimate
   - mremoteng
   - p4v
