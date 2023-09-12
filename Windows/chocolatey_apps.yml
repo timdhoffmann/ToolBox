@@ -4,6 +4,7 @@ apps:
     - 7zip
     - adobereader
     - bitwarden
+    - bottom
     - discord
     - dotnet-sdk
     - epicgameslauncher
@@ -24,9 +25,14 @@ apps:
     - virtualbox
     - vscode
     - windirstat
-    # - poshgit # Outdated in choco. Install via scoop.
     - spotify
     # "voidtools.Everything",
+    # Not available on Choco. Install via Scoop.
+    # eza
+    # Outdated in choco.
+    # - poshgit
+    # erdtree
+    # dust
 
   private:
     # - visualstudio2022community
