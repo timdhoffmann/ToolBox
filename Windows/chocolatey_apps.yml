@@ -14,6 +14,8 @@ apps:
     - lghub
     - neovim
     - nerd-fonts-cascadiacode
+    - nerd-fonts-Hack
+    - nerd-fonts-JetBrainsMono
     - notion
     - powershell-core
     - powertoys
