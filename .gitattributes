@@ -1,0 +1,5 @@
+# Use Unix-style line endings, except for Windows batch files, to avoid
+# excessive change detection.
+* text=auto eol=lf
+*.{cmd,[cC][mM][dD]} text eol=crlf
+*.{bat,[bB][aA][tT]} text eol=crlf
