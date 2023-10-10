@@ -19,6 +19,7 @@ apps:
     - notion
     - powershell-core
     - powertoys
+    - pycharm
     - python
     - rustup.install
     - starship
