@@ -5,6 +5,8 @@ apps:
     - adobereader
     - bitwarden
     - bottom
+    # Syntax highlighting for git diff and more.
+    - delta
     - discord
     - dotnet-sdk
     - epicgameslauncher
