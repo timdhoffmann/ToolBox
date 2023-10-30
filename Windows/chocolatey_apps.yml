@@ -12,6 +12,7 @@ apps:
     - epicgameslauncher
     - firefox
     - git
+    - go
     - googlechrome
     - lghub
     - neovim
