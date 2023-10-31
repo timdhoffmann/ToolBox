@@ -60,6 +60,7 @@ apps:
     # - lghub
 
   work:
+  - datagrip
   - visualstudio2022professional
   # UE5
   ## .NET desktop development
