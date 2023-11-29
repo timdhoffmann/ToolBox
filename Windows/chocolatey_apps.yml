@@ -79,6 +79,10 @@ apps:
   - mremoteng
   - p4v
   - postman
+  # Process Explorer for debugging.
+  - procexp
+  # Process Monitor for Debugging.
+  - procmon
   - jetbrains-rider
   - strawberryperl
     #   ("SlackTechnologies.Slack",)
