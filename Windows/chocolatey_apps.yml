@@ -2,7 +2,8 @@
 apps:
   common:
     - 7zip
-    - adobereader
+    # Installer hash doesn't match.
+    # - adobereader
     - bitwarden
     - bottom
     # Syntax highlighting for git diff and more.

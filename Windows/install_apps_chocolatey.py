@@ -33,13 +33,15 @@ def handle_apps(args: argparse.Namespace, apps: list[str]):
 
     for app in apps:
 
-        cmd = ["chocolatey", "upgrade", app, *choco_args]
+        cmd = ["choco", "upgrade", app, *choco_args]
         print(cmd)
 
         show_output = True
         stdout_dest = None if show_output else subprocess.DEVNULL
+        # 'shell=True' is required to fix a 'File not found' error.
+        # see https://stackoverflow.com/questions/73193119/python-filenotfounderror-winerror-2-the-system-cannot-find-the-file-specifie.
         response = subprocess.run(
-            cmd, stdout=stdout_dest, check=True
+            cmd, stdout=stdout_dest, shell=True, check=True
         )
 
         print(f"\
