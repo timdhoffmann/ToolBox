@@ -61,6 +61,7 @@ apps:
     # - lghub
 
   work:
+  - azure-cli
   - datagrip
   - visualstudio2022professional
   # UE5
