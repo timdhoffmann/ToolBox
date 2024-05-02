@@ -33,6 +33,9 @@ apps:
     - vscode
     - windirstat
     - spotify
+    - zoxide
+    # Dependency of 'zoxide' for fuzzy-finding.
+    - fzf
     # "voidtools.Everything",
     # Not available on Choco. Install via Scoop.
     # eza
@@ -61,6 +64,7 @@ apps:
     # - lghub
 
   work:
+  - azure-cli
   - datagrip
   - visualstudio2022professional
   # UE5
