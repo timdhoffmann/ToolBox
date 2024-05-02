@@ -86,7 +86,7 @@ apps:
   - procmon
   - jetbrains-rider
   - strawberryperl
-    #   ("SlackTechnologies.Slack",)
+  - slack
     # ("Microsoft.Teams",)
   # -     "JohannesMillan.superProductivity",
   #   "Microsoft.AzureStorageExplorer",
