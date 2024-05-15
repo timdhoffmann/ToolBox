@@ -21,6 +21,8 @@ apps:
     - nerd-fonts-Hack
     - nerd-fonts-JetBrainsMono
     - notion
+    # Required by Sonarlint VSCode extension for linting .yml and .json files.
+    - nodejs
     - powershell-core
     - powertoys
     - python
