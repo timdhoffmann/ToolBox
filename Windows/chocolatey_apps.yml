@@ -64,8 +64,6 @@ apps:
 
   work:
   - azure-cli
-  # Using toolbox instead of individual apps, since adding IDEs to PATH is easier this way.
-  - jetbrainstoolbox
   - visualstudio2022professional
   # UE5
   ## .NET desktop development
@@ -78,6 +76,7 @@ apps:
   - visualstudio2022-workload-nativegame
   ## Maybe .net desktop build tools for .net 4.6.2?
 
+  - jetbrainstoolbox
   # Useful for investigating file metadata, e.g. for '.exe' files.
   # - exiftool
   - mremoteng
@@ -88,7 +87,7 @@ apps:
   # Process Monitor for Debugging.
   - procmon
   - strawberryperl
-    #   ("SlackTechnologies.Slack",)
+  - slack
     # ("Microsoft.Teams",)
   # -     "JohannesMillan.superProductivity",
   #   "Microsoft.AzureStorageExplorer",
