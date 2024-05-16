@@ -82,6 +82,8 @@ apps:
   # Useful for investigating file metadata, e.g. for '.exe' files.
   # - exiftool
   - mremoteng
+  # Remote Desktop Connection Manager from Sysinternals.
+  - rdcman
   - p4v
   - postman
   # Process Explorer for debugging.
