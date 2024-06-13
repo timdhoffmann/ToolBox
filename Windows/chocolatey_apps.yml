@@ -92,6 +92,7 @@ apps:
   - procmon
   - strawberryperl
   - slack
+  - sysinternals
     # ("Microsoft.Teams",)
   # -     "JohannesMillan.superProductivity",
   #   "Microsoft.AzureStorageExplorer",
