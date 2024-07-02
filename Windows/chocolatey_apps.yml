@@ -23,6 +23,7 @@ apps:
     - notion
     # Required by Sonarlint VSCode extension for linting .yml and .json files.
     - nodejs
+    - obsidian
     - powershell-core
     - powertoys
     - python
