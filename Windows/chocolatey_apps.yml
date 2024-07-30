@@ -6,6 +6,7 @@ apps:
     # - adobereader
     - bitwarden
     - bottom
+    - brave
     # Syntax highlighting for git diff and more.
     - delta
     - discord
@@ -59,7 +60,6 @@ apps:
     - foxitreader
     - googledrive
     - mailspring
-    - brave
     - signal
     # - whatsapp
     - authy-desktop
