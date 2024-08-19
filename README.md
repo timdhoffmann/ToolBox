@@ -13,3 +13,9 @@ A collection of small tools, settings, and scripts.
 ```pwsh
 pip install pyyaml
 ```
+
+## Windows Scripts
+
+- Create a shortcut to the respective `*.bat` file.
+- Move the shortcut to `%appdata%\Microsoft\Windows\Start Menu`.
+- Invoke via Start Menu search or PowerToys Run.

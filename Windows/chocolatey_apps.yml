@@ -16,6 +16,7 @@ apps:
     - git
     - go
     - googlechrome
+    - jq
     - lghub
     - neovim
     - nerd-fonts-cascadiacode
