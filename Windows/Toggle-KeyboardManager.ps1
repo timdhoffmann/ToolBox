@@ -1,7 +1,7 @@
 # Togles the PowerToys Keyboard Manager module on/off.
 # Source: https://github.com/microsoft/PowerToys/issues/4879
 
-$kbm = Get-Process PowerToys.KeyboardManagerEngine #-ErrorAction SilentlyContinue
+$kbm = Get-Process PowerToys.KeyboardManagerEngine -ErrorAction SilentlyContinue
 
 if ($kbm){
     Stop-Process -Name PowerToys.KeyboardManagerEngine
