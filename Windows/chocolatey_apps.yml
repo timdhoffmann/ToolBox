@@ -4,6 +4,7 @@ apps:
     - 7zip
     # Installer hash doesn't match.
     # - adobereader
+    - bat
     - bitwarden
     - bottom
     - brave
@@ -18,6 +19,7 @@ apps:
     - googlechrome
     - jq
     - lghub
+    - lsd
     - neovim
     - nerd-fonts-cascadiacode
     - nerd-fonts-Hack
