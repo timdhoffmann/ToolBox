@@ -14,6 +14,16 @@ A collection of small tools, settings, and scripts.
 pip install pyyaml
 ```
 
+## Windows Apps
+
+- Run from an elevated `cmc`, **not** PowerShell, since it can cause trouble with
+self-updating, etc.
+
+```cmd
+cd <this_repo>\Windows
+python install_apps_chocolatey.py [--work] [--private] -y
+```
+
 ## Windows Scripts
 
 - Create a shortcut to the respective `*.bat` file.
