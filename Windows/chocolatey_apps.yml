@@ -96,6 +96,8 @@ apps:
     - procexp
     # Process Monitor for Debugging.
     - procmon
+    # This has been observed failing to upgrade at least once. Manually uninstalling
+    # and re-installing fixed this.
     - strawberryperl
     - slack
     - sysinternals
