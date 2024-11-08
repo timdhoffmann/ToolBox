@@ -20,6 +20,8 @@ apps:
     - jq
     - lazygit
     - lghub
+    # (Clang). some C compiler is required by nvim-treesitter.
+    - llvm
     - lsd
     - neovim
     - nerd-fonts-cascadiacode
