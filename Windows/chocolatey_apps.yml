@@ -41,6 +41,7 @@ apps:
     - vagrant
     - virtualbox
     - vscode
+    - wezterm
     - windirstat
     - spotify
     - zoxide
@@ -102,7 +103,8 @@ apps:
     # and re-installing fixed this.
     - strawberryperl
     - slack
-    - sysinternals
+    # Deactivated due to installation issues with checksum not matching.
+    # - sysinternals
       # ("Microsoft.Teams",)
   # -     "JohannesMillan.superProductivity",
   #   "Microsoft.AzureStorageExplorer",
