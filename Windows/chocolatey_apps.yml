@@ -103,6 +103,7 @@ apps:
     # and re-installing fixed this.
     - strawberryperl
     - slack
+    - terraform
     # Deactivated due to installation issues with checksum not matching.
     # - sysinternals
       # ("Microsoft.Teams",)
