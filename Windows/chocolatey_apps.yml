@@ -49,9 +49,9 @@ apps:
     - fzf
     # "voidtools.Everything",
     # Not available on Choco. Install via Scoop.
-    # eza
-    # Outdated in choco.
-    # - poshgit
+    #   eza
+    #   Outdated in choco.
+    #   poshgit
     # erdtree
     # dust
 
