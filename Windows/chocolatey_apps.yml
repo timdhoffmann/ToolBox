@@ -7,7 +7,6 @@ apps:
     - bat
     - bitwarden
     - bottom
-    - brave
     # Syntax highlighting for git diff and more.
     - delta
     - discord
@@ -27,7 +26,6 @@ apps:
     - nerd-fonts-cascadiacode
     - nerd-fonts-Hack
     - nerd-fonts-JetBrainsMono
-    - notion
     # Required by Sonarlint VSCode extension for linting .yml and .json files.
     - nodejs
     - obsidian
@@ -100,7 +98,7 @@ apps:
     # Process Monitor for Debugging.
     - procmon
     # This has been observed failing to upgrade at least once. Manually uninstalling
-    # and re-installing fixed this.
+    # and re-installing fixed this. What depends on strawberryperl?
     - strawberryperl
     - slack
     - terraform
