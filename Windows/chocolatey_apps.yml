@@ -41,7 +41,6 @@ apps:
     - vscode
     - wezterm
     - windirstat
-    - spotify
     - zoxide
     # Dependency of 'zoxide' for fuzzy-finding.
     - fzf
