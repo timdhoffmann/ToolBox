@@ -12,6 +12,8 @@ apps:
     - discord
     - dotnet-sdk
     - epicgameslauncher
+    # File search 'find' replacement.
+    - fd
     - firefox
     - git
     - go
